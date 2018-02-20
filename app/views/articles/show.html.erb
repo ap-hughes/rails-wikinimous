@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="container-style">
+      <h1><%= @article.title %>
+        <button class="btn btn-default">
+          <%= link_to "update", article_update_path(@article) %>
+        </button>
+        <button class="btn btn-default">
+          <%= link_to "delete", article_path(@article), method: :delete %>
+        </button>
+      </h1>
+      <hr>
+      <img src="https://picsum.photos/500/300/?random" alt="">
+      <p><%= @article.content %></p>
+      <%= link_to "Go back to the articles", articles_path %>
+    </div>
+  </div>
+</div>
